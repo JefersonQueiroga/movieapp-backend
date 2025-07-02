@@ -34,7 +34,7 @@ movieapp-backend/
 
 ### 1. Clone e instale dependências
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/JefersonQueiroga/movieapp-backend.git
 cd movieapp-backend
 npm install
 ```
