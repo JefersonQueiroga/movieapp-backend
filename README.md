@@ -219,57 +219,6 @@ CREATE TABLE usuarios (
 );
 ```
 
-## 🔧 Troubleshooting
 
-### **Porta já em uso**
-```bash
-# Verificar o que está usando a porta 3000
-lsof -i :3000
 
-# Ou mude a porta no .env
-PORT=3001
-```
-
-### **Erro de CORS**
-Certifique-se que `app.use(cors())` está no `server.js`.
-
-### **Database não sincroniza**
-Verifique se o arquivo `database.sqlite` tem permissões de escrita.
-
-### **JWT Secret não definido**
-Certifique-se que o arquivo `.env` existe e tem `JWT_SECRET`.
-
-## 🚀 Deploy (Opcional)
-
-### **Heroku**
-```bash
-# Instalar Heroku CLI e fazer login
-heroku create movieapp-backend
-git push heroku main
-
-# Configurar variáveis de ambiente
-heroku config:set JWT_SECRET=your-production-secret-here
-```
-
-### **Railway/Render**
-- Conecte seu repositório Git
-- Configure as variáveis de ambiente
-- Deploy automático
-
-## 🤝 Integração com Frontend
-
-### **React Native/Expo**
-```typescript
-const BASE_URL = 'http://localhost:3000/api'; // Desenvolvimento
-// const BASE_URL = 'https://sua-api.herokuapp.com/api'; // Produção
-
-const response = await fetch(`${BASE_URL}/usuarios/cadastro`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ nome, email, senha })
-});
-```
-
-### **Emulador Android**
-Use `http://10.0.2.2:3000/api` em vez de `localhost`.
 
