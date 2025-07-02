@@ -174,32 +174,6 @@ curl -X POST http://localhost:3000/api/usuarios/login \
 curl http://localhost:3000/api/health
 ```
 
- **Com REST Client (VS Code)**
-Crie um arquivo `tests.http`:
-```http
- Health Check
-GET http://localhost:3000/api/health
-
-Cadastro
-POST http://localhost:3000/api/usuarios/cadastro
-Content-Type: application/json
-
-{
-  "nome": "João Silva",
-  "email": "joao@email.com",
-  "senha": "123456"
-}
-
-### Login
-POST http://localhost:3000/api/usuarios/login
-Content-Type: application/json
-
-{
-  "email": "joao@email.com",
-  "senha": "123456"
-}
-```
-
 ## 🗄️ Banco de Dados
 
 ### **SQLite**
