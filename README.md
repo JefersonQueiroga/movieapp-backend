@@ -174,13 +174,13 @@ curl -X POST http://localhost:3000/api/usuarios/login \
 curl http://localhost:3000/api/health
 ```
 
-### **Com REST Client (VS Code)**
+ **Com REST Client (VS Code)**
 Crie um arquivo `tests.http`:
 ```http
-### Health Check
+ Health Check
 GET http://localhost:3000/api/health
 
-### Cadastro
+Cadastro
 POST http://localhost:3000/api/usuarios/cadastro
 Content-Type: application/json
 
